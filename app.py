@@ -1,4 +1,4 @@
-import os, subprocess
+import os, subprocess, time
 
 from flask import Flask, request, redirect, flash, send_from_directory
 from werkzeug.utils import secure_filename
@@ -38,4 +38,9 @@ def _subprocess_cmd(command):
 
 def _create_mp_file(filename):
     _subprocess_cmd('cd ' + UPLOAD_FOLDER + ";" + "mptopdf " + filename)
+    time.sleep(3)
     return os.path.splitext(filename)[0] + '-0.pdf'
+
+
+if __name__ == "__main__":
+    app.run(host='139.59.208.63')
