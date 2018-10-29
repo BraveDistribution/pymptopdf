@@ -37,6 +37,6 @@ def _subprocess_cmd(command):
 
 
 def _create_mp_file(filename):
-    time.sleep(2)
     _subprocess_cmd('cd ' + UPLOAD_FOLDER + ";" + "mptopdf " + filename)
+    time.sleep(2)
     return os.path.splitext(filename)[0] + '-0.pdf'
