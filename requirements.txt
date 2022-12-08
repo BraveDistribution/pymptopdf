@@ -1,5 +1,5 @@
 bleach==3.0.2
-certifi==2018.10.15
+certifi==2022.12.7
 cffi==1.11.5
 Click==7.0
 cmarkgfm==0.4.2
